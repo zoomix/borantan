@@ -6,7 +6,7 @@ describe Interest do
   let (:partial) { Interest.new( "2014-03-27	3,15	2,27	1,92	2,07	2,03" ) }
 
   it "should assign date" do
-    full.date.should == '2015-03-27'
+    full.date.to_s.should == '2015-03-27'
   end
 
   it "should assign y10" do

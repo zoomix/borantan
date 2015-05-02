@@ -15,7 +15,8 @@ describe 'Interest Range' do
 
   it 'Fetches relavant dates for a year' do
     range = Interest_Range.new(all_interests)
-    range_dates = range.relavant_interests( "2014-01-10", "2015-01-01" ).map { |interest| interest.date }
+    range_dates = range.relavant_interests( Date.parse("2014-01-10"), Date.parse("2015-01-10") )
+                       .map { |interest| interest.date.to_s }
     range_dates.should == ["2014-01-10", "2014-05-10", "2015-01-01"]
   end
 
