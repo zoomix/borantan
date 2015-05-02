@@ -3,6 +3,7 @@ require 'interest'
 describe Interest do
 
   let (:full) { Interest.new( "2015-03-27	3,15	2,27	1,92	2,07	2,03	2,05" ) }
+  let (:partial) { Interest.new( "2014-03-27	3,15	2,27	1,92	2,07	2,03" ) }
 
   it "should assign date" do
     full.date.should == '2015-03-27'
@@ -30,6 +31,10 @@ describe Interest do
 
   it "should assign m3" do
     full.m3.should == 2.05
+  end
+
+  it "should use y1 when m3 is missing" do
+    partial.m3.should == partial.y1
   end
 
 end
