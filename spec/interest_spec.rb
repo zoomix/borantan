@@ -4,6 +4,10 @@ describe Interest do
 
   let (:full) { Interest.new( "2015-03-27	3,15	2,27	1,92	2,07	2,03	2,05" ) }
 
+  it "should assign date" do
+    full.date.should == '2015-03-27'
+  end
+
   it "should assign y10" do
     full.y10.should == 3.15
   end
