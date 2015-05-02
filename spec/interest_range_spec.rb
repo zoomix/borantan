@@ -5,7 +5,7 @@ describe 'Interest Range' do
 
   let (:all_interests) do 
     [
-      Interest.new( "2015-01-03\t6,15\t4,27\t1,92\t4,07\t4,03\t4,05" ),
+      Interest.new( "2015-02-01\t6,15\t4,27\t1,92\t4,07\t4,03\t4,05" ),
       Interest.new( "2015-01-01\t5,15\t3,27\t1,92\t3,07\t3,03\t3,05" ),
       Interest.new( "2014-05-10\t3,15\t2,27\t1,92\t2,07\t2,03\t2,05" ),
       Interest.new( "2014-01-10\t3,15\t2,27\t1,92\t2,07\t2,03\t2,05" ),
