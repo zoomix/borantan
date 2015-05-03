@@ -12,5 +12,20 @@ class Interest
   def m3 
     @m3 || @y1
   end
+
+  def self.years(interest_duration) 
+    case interest_duration
+    when :y10
+      return 10
+    when :y5
+      return 5
+    when :y3
+      return 3
+    when :y2
+      return 2
+    when :y1
+      return 1
+    end
+  end
   
 end
