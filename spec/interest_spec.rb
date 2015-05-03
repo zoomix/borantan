@@ -3,7 +3,7 @@ require 'interest'
 describe Interest do
 
   let (:full) { Interest.new( "2015-03-27	3,15	2,27	1,92	2,07	2,03	2,05" ) }
-  let (:partial) { Interest.new( "2014-03-27	3,15	2,27	1,92	2,07	2,03" ) }
+  let (:partial) { Interest.new( "2014-03-27  3,15  2,27  1,92  2,07  2,03" ) }
 
   it "should assign date" do
     full.date.to_s.should == '2015-03-27'
@@ -35,6 +35,11 @@ describe Interest do
 
   it "should use y1 when m3 is missing" do
     partial.m3.should == partial.y1
+  end
+
+  it "parses dates when dashes are missing" do
+    date_fail = Interest.new( "2014 03 27	3,15	2,27	1,92	2,07	2,03" )
+    date_fail.date.to_s.should == "2014-03-27"
   end
 
 end

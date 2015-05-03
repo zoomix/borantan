@@ -38,12 +38,14 @@ describe 'Calculator' do
 
   it 'All average of two years simple' do
     calc = Calculator.new(interest_data)
-    calc.all_averages(:y2).last.split("\t").last.should == "1,50"
+    line = calc.all_averages(:y2).last.split("\t")
+    line[7..-1].should == ["1,50", "-0,43"]
   end
 
   it 'All average of three years simple' do
     calc = Calculator.new(interest_data)
-    calc.all_averages(:y3).last.split("\t").last.should == "2,00"
+    line = calc.all_averages(:y3).last.split("\t")
+    line[7..-1].should == ["2,00", "-0,08"]
   end
 
 

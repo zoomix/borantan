@@ -6,8 +6,13 @@ class Interest
   def initialize(line)
     @line = line
     args = line.split("\t")
-    @date = Date.parse(args.first)
-    @y10, @y5, @y3, @y2, @y1, @m3 = args.drop(1).map {|string| string.tr(',','.').to_f }
+    begin
+      @date = Date.parse(args.first.gsub(' ', '-'))
+      @y10, @y5, @y3, @y2, @y1, @m3 = args.drop(1).map {|string| string.tr(',','.').to_f }
+    rescue Exception => e
+      puts "Could not parse:"
+      puts args
+    end
   end
 
   def m3 

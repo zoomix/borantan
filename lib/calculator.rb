@@ -8,7 +8,7 @@ class Calculator
   def all_averages(interest_duration)
     @interests.map do |interest|
       avg = average(interest.date, interest_duration)
-      ("#{interest.line}\t%.2f" % [avg]).tr('.',',')
+      ("#{interest.line.strip}\t%.2f\t%.2f" % [avg, interest.send(interest_duration.to_sym)-avg]).tr('.',',')
     end
   end
 
