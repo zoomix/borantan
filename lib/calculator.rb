@@ -1,8 +1,15 @@
 class Calculator
 
   def initialize(lines)
-    interests = lines.map { |line| Interest.new(line) }
-    @interest_range = Interest_Range.new(interests)
+    @interests = lines.map { |line| Interest.new(line) }
+    @interest_range = Interest_Range.new(@interests)
+  end
+
+  def all_averages(interest_duration)
+    @interests.map do |interest|
+      avg = average(interest.date, interest_duration)
+      ("#{interest.line}\t%.2f" % [avg]).tr('.',',')
+    end
   end
 
   def average(from_date, interest_duration) 
