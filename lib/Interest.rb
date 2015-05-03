@@ -16,7 +16,7 @@ class Interest
   end
 
   def m3 
-    @m3 || @y1
+    if @m3 <= 0 then @y1 else @m3 end
   end
 
   def self.years(interest_duration) 
