@@ -1,4 +1,4 @@
-### Boräntor
+## Boräntor
 
 Interest calculator. Specifically..
 
@@ -7,6 +7,12 @@ Baah. Skitsamma.
 Det här beräknar och jämför räntor från SEBs historiska räntor. Den kollar, för varje ränteförändring, hur den rörliga(*) räntan utvecklats och tar ett viktat snitt av dessa om jämför med den räntan man vill jämföra med.
 
 Så om du och din tvilling köpte ett varsitt hus för 1 miljon 2010. Du band räntan i 5 år och hen körde med rörlig ränta. Efter 5 år undrar vi - vem gjorde en bättre deal?
+
+### Results
+
+De är bra, ekonomerna. I alla fall på sikt. Man tjänar aldrig på att binda på 10 år (förlorar i snitt >2%-enheter) och man tjänar aldrig på att binda på 5 år (förlorar i snitt ~1,5%-enheter). På data från 1995.
+
+Binda 3, 2 och 1 år kan man tjäna på. Rätt mycket ibland. Men.. Ja. Man ska fortfarande, som lekman, out-smart:a bankens ekonomer.. 
 
 ### How do you play it?
 
