@@ -12,13 +12,11 @@ class Calculator
     pairs = relevant_interests.zip(relevant_interests.drop(1))
     pairs = pairs.map do |a,b|
       if b
-        puts a.m3
         a.m3 * (b.date - a.date)
       else
         0
       end
     end
-    puts "pairs2: #{pairs}"
     pairs.inject(0, :+) / (Interest.years(interest_duration) * 365)
   end
 
